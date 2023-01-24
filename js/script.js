@@ -7,6 +7,7 @@ var currentDayEl = $('#currentDay');
 
   }
 currentDay()  
+
 $(document).ready(function () {
   // saveBtn click listener 
   $(".saveBtn").on("click", function () {
@@ -17,9 +18,12 @@ $(document).ready(function () {
       // Save text in local storage
       localStorage.setItem(time, text);
   })
-  function timeTracker() {
+
+  function timeNote() {
     //get current number of hours.
     var timeNow = moment().hour();
+
+  
 
     // loop over time blocks
     $(".time-block").each(function () {
@@ -56,5 +60,5 @@ $("#hour15 .description").val(localStorage.getItem("hour15"));
 $("#hour16 .description").val(localStorage.getItem("hour16"));
 $("#hour17 .description").val(localStorage.getItem("hour17"));
 
-timeTracker();
+timeNote();
 })
